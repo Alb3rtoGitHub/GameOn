@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    background-color: #9F3647;
+    font-size: 20px;
+    font-weight: bold;
+    border: 10px #9F3647 solid;
+}
+body{
+    background-image: url(../img/fondo_registro1.jpg);
+    background-repeat: repeat;
+}
+.cajaRegistro{
+    box-sizing: border-box;
+    margin: 60px auto;
+    padding: 70px 70px;
+    width: 70vh;
+    background-color: #2A2A2A;
+    border-radius: 10px;
+}
+h1 {
+
+    font-size: 40px;
+}
+
+.datos{
+    font-size: 20px;
+    text-indent: 20px;
+    background-color: #333333;
+    border-style: solid;
+    border-color: #9F3647;
+    border-radius: 30px;
+    display: block;
+    margin-top: 20px;
+    width: 450px;
+    height: 4opx;
+}
+
+.checkbox{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+h2 {
+    position: relative;
+    display: inline;
+    font-size: 15px;
+}
+.boton{
+    background-color: #9F3647;
+    border-color: #9F3647;
+    border-radius: 5px;
+    width: 450px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: #9F3647;
+}
+.textoFooter{
+    font-weight: bold;
+    font-size: 20px;
+    border: 10px #9F3647 solid;
+
+}
