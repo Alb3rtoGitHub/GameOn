@@ -398,3 +398,42 @@ hr {
     margin: 0 auto;
     margin-top: 40px;
 }
+
+footer {
+    background-color: #11212D;
+    color: #CCD0CF;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0 ;
+}
+
+.footer-nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-nav-list-item{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
