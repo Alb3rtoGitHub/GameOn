@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameOn</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Andika&amp;family=Bangers&amp;family=Chivo+Mono&amp;family=Hanalei+Fill&amp;family=Indie+Flower&amp;family=Lobster&amp;family=Oswald&amp;family=Pathway+Gothic+One&amp;family=Press+Start+2P&amp;family=Prosto+One&amp;family=Share+Tech+Mono&amp;family=Titan+One&amp;family=Work+Sans&amp;family=Archivo+Black&amp;family=Bakbak+One&amp;family=Russo+One&amp;family=Gasoek+One&amp;family=Anek+Gurmukhi&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="./estilos/styles.css">
     <link rel="shortcut icon" href="./Gameon.png" type="image/x-icon">
 </head>
 
@@ -27,14 +28,38 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main" class="main">
+        <section data-aos="flip-up" data-aos-duration="900" class="sectionPrincipal">
+            <h1 class="tituloPrincipal">Los mejores juegos para Consolas y PC<br> a un click de distancia</h1>
+            <h2 class="subtituloPrincipal">Títulos y Novedades</h2>
+            <h2 class="subtituloPrincipal">Tendencias</h2>
+        </section>
+        <section data-aos="fade-right" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000"
+            class="buscadorPrincipal">
+            <h2 class="tituloSection">¿Qué juego estas buscando?</h2>
+            <form class="buscadorJuegos">
+                <input class="inputBuscador" type="text" placeholder="Buscar...">
+                <input class="botonBuscador" type="submit" value="Buscar">
+            </form>
+        </section>
+        <hr>
+        <section data-aos="fade-right" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000"
+            class="buscadorPrincipal">
+            <h2 class="tituloSection">¿Qué juego estas buscando?</h2>
+            <form class="buscadorJuegos">
+                <input class="inputBuscador" type="text" placeholder="Buscar..." />
+                <input class="botonBuscador" type="submit" value="Buscar">
+            </form>
+        </section>
+        <hr>
 
     </main>
     <footer>
 
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-
+        AOS.init();
     </script>
 </body>
 

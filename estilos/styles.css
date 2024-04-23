@@ -2,7 +2,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: ;   */
+    font-family: 'Anika', sans-serif;
+    color: #CCD0CF;
+}
+
+@keyframes skew-shake-x {
+    0% {
+        transform: skewX(-15deg);
+    }
+
+    5% {
+        transform: skewX(15deg);
+    }
+
+    10% {
+        transform: skewX(-25deg);
+    }
+
+    15% {
+        transform: skewX(25deg);
+    }
+
+    20% {
+        transform: skewX(0deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+    }
 }
 
 body {
@@ -17,67 +44,68 @@ body {
 .header {
     background-color: #11212D;
     color: #CCD0CF;
-    height: 15vh;
+    height: 20vh;
     position: sticky;
-    top: 10;
+    top: 0;
     z-index: 10;
 
     .navegacion {
         display: flex;
+        color: #CCD0CF;
         justify-content: space-between;
         align-items: center;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
         padding: 1.5rem 0;
 
         .anclaLogo {
-            text-decoration: none;
-            color: blanchedalmond;
-            font-weight: 800;
-            font-size: 1.2rem;
+            &:hover {
+                animation: skew-shake-x 0.75s infinite;
+            }
         }
+
         .listaNav {
             list-style: none;
             display: flex;
             align-items: center;
 
             .listaItem {
-                    margin-right: 25px;
+                margin-right: 20px;
 
-                    .linkNav {
-                        color: floralwhite;
-                        text-decoration: none;
-                        font-weight: 800;
-                        font-size: 1.1rem;
-                        padding: 0.5rem 1rem;
+                .linkNav {
+                    text-decoration: none;
+                    color: #CCD0CF;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
 
-                        /* efecto boton presionado*/
-                        transition: transform 0.3s;
-                        box-shadow: 0.3s;
+                    /* efecto botón presionado*/
+                    transition: transform 0.3s, box-shadow 0.3s;
 
-                        &:hover {
-                            transform: scale(0.95);
-                            box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4) border-radius 5px;
-                        }
-                    }
-
-                    /* botón Login */
-                    .linkNav.Login {
+                    &:hover {
+                        transform: scale(0.95);
                         background-color: #253745;
-                        color: #CCD0CF;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
                         border-radius: 5px;
-
-
-                        transition: transform 0.3s;
-                        box-shadow: 0.3s;
-
-                        &:hover {
-                            background-color: #11212D;
-                            transform: scale(0.95);
-                            box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4)
-                        }
                     }
                 }
+
+                /* botón Login */
+                .linkNav.Login {
+                    background-color: #05141B;
+                    color: #CCD0CF;
+                    border-radius: 5px;
+
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        background-color: #253745;;
+                        /* transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4) */
+                    }
+                }
+            }
         }
     }
 }
@@ -118,6 +146,255 @@ body {
 
     }
 }
+/*ESTILOS PARA MAIN ESCRITORIO*/
+.main {
+    .sectionPrincipal {
+        background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/principal.webp);
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .tituloPrincipal {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .subtituloPrincipal {
+            font-family: 'chivo mono', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .buscadorPrincipal {
+        background-color: #05141B;
+        color: #CCD0CF;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tituloSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .buscadorJuegos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+
+            .inputBuscador {
+                border: 3px solid #9ba8ab;
+                border-radius: 25px;
+                color: #05141B;
+                font-size: 1.2rem;
+                height: 50px;
+                margin: 20px 0px;
+                outline: none;
+                padding: 0px 20px;
+                width: 500px;
+            }
+
+            .botonBuscador {
+                background-color: #11212d;
+                display: inline-block;
+                color: #CCD0CF;
+                height: 50px;
+                margin: 20px 10px;
+                padding: 0 20px;
+                border-radius: 25px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: 2px solid #ccdccf;
+                text-align: center;
+                /* Agregar efecto de botón presionado */
+                transition: transform 0.3s, box-shadow 0.35s;
+
+                &:hover {
+                    background-color: #253745;
+                    transform: scale(1.05);
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+
+    }
+
+    .juegosTendencia {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+
+        .tituloSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .juegos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+
+                .juego {
+                    width: 200px;
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
+
+                    .imgTendencia {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+
+                    .tituloJuego {
+                        z-index: 2;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 20rem;
+                        width: 100%;
+                        transform: translateY(-50%) translateX(-50%);
+
+                        h4 {
+                            font-size: 2rem;
+                            font-weight: bold;
+                            opacity: 0;
+                            margin-bottom: 0.5rem;
+                            letter-spacing: 0.1rem;
+                            transition: opacity 0.5s ease-in-out;
+
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: 0 0 30px #9f3648cd;
+                        transform: scale(1.1);
+
+                    }
+
+                    &:hover h4 {
+                        opacity: 1;
+
+                    }
+
+                    &:hover::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        background-color: #9f3648;
+                        /* Color azul transparente */
+                        z-index: 1;
+                        /* Para asegurarse de que esté sobre la imagen */
+                    }
+                }
+            }
+
+        }
+
+        .boton {
+            border: 1px solid #CCD0CF;
+            box-sizing: content-box;
+            margin-top: 50px;
+            margin-left: 20px;
+            background-color: #11212d;
+            color: #CCD0CF;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom: 60px;
+            /* Agregar efecto de botón presionado */
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-color: #253745;
+                transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+
+        }
+    }
+
+    .peliculasAclamadas {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 60px;
+
+        .tituloSection {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .aclamadas {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0px 0px 40px 0px;
+
+            .peliculaItem {
+                border-radius: 25px;
+                width: 170px;
+                min-width: 170px;
+                font-size: 20px;
+                cursor: pointer;
+                margin-left: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .imgAclamada {
+                    border-radius: 5%;
+                    width: 95%;
+                    height: 95%;
+                    object-fit: cover;
+                }
+
+            }
 
 
+        }
+    }
 
+}
+
+hr {
+    border: 2px solid #253745;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
