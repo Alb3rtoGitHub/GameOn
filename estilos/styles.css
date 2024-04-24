@@ -539,3 +539,39 @@ footer {
     padding-inline-start: 40px;
     unicode-bidi: isolate;
 }
+
+.detalles{
+    display: flex;
+}
+
+.detalles-titulo { 
+    font-size: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.detalles-sinopsis {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.sinopsis-titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sinopsis-texto {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.sinopsis-texto article {
+    margin-top: 10px;
+}
+
+.sinopsis-texto article p {
+    margin-bottom: 15px;
+}
