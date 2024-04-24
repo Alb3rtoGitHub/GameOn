@@ -1,28 +1,157 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    text-decoration: none;
+    font-family: 'Anika', sans-serif;
+    color: #CCD0CF;
 }
 
-nav{
-    background-color: #9F3647;
-    font-size: 20px;
-    font-weight: bold;
-    border: 10px #9F3647 solid;
+@keyframes skew-shake-x {
+    0% {
+        transform: skewX(-15deg);
+    }
+
+    5% {
+        transform: skewX(15deg);
+    }
+
+    10% {
+        transform: skewX(-25deg);
+    }
+
+    15% {
+        transform: skewX(25deg);
+    }
+
+    20% {
+        transform: skewX(0deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+    }
 }
-body{
-    background-image: url(../img/fondo_registro1.jpg);
-    background-repeat: repeat;
+
+body {
+    background-color: #05141B;
+    color: #CCD0CF;
 }
+
+.logo-game-on {
+    width: 10vh;
+}
+
+.header {
+    background-color: #11212D;
+    color: #CCD0CF;
+    height: 15vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .navegacion {
+        display: flex;
+        color: #CCD0CF;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+
+        .anclaLogo {
+            &:hover {
+                animation: skew-shake-x 0.75s infinite;
+            }
+        }
+
+        .listaNav {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            .listaItem {
+                margin-right: 20px;
+
+                .linkNav {
+                    text-decoration: none;
+                    color: #CCD0CF;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+
+                    /* efecto botón presionado*/
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        transform: scale(0.95);
+                        background-color: #253745;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+
+                /* botón Login */
+                .linkNav.Login {
+                    background-color: #05141B;
+                    color: #CCD0CF;
+                    border-radius: 5px;
+
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        background-color: #253745;
+                        ;
+                        /* transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4) */
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ESTILOS PARA TABLET Y HEADER MOBILE*/
+
+@media (max-width: 768px) {
+
+    .header {
+        height: initial;
+
+        .navegacion {
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .anclaLogo {
+                /* font-weight: 800;
+                font-size: 1.2rem; */
+            }
+
+            .ListaNav {
+                padding: initial;
+
+                .listaItem {
+                    .linkNav {
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 .cajaRegistro{
     box-sizing: border-box;
     margin: 60px auto;
     padding: 70px 70px;
     width: 70vh;
-    background-color: #2A2A2A;
+    background-color: #11212D;
     border-radius: 10px;
 }
 h1 {
@@ -33,9 +162,9 @@ h1 {
 .datos{
     font-size: 20px;
     text-indent: 20px;
-    background-color: #333333;
+    background-color: #11212D;
     border-style: solid;
-    border-color: #9F3647;
+    border-color: #05141B;
     border-radius: 30px;
     display: block;
     margin-top: 20px;
@@ -54,28 +183,53 @@ h2 {
     font-size: 15px;
 }
 .boton{
-    background-color: #9F3647;
-    border-color: #9F3647;
+    background-color: #05141B;
+    border-color: #05141B;
     border-radius: 5px;
     width: 450px;
     height: 60px;
     margin-top: 20px;
     font-size: 20px;
 }
-footer{
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-
-    width: 100%;
-    height: 10vh;
+footer {
+    background-color: #11212D;
+    color: #CCD0CF;
+    height: 15vh;
     display: flex;
-    justify-content: space-around;
-    background-color: #9F3647;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
 }
-.textoFooter{
-    font-weight: bold;
-    font-size: 20px;
-    border: 10px #9F3647 solid;
 
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1.5rem 0 ;
+}
+
+.footer-nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-nav-list-item{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
 }
