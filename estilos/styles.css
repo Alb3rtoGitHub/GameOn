@@ -542,6 +542,20 @@ footer {
 
 .detalles{
     display: flex;
+    padding: 0px 130px 130px 130px;
+    justify-content: center;
+}
+
+.detalles-trailer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.detalles-trailer iframe {
+    width: 800px;
+    height: 450px;
 }
 
 .detalles-titulo { 
@@ -550,7 +564,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .detalles-sinopsis {
