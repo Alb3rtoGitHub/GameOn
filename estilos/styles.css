@@ -91,7 +91,7 @@ body {
                 }
 
                 /* botón Login */
-                .linkNav.Login {
+                .linkNav.login {
                     background-color: #05141B;
                     color: #CCD0CF;
                     border-radius: 5px;
@@ -101,9 +101,26 @@ body {
 
                     &:hover {
                         background-color: #253745;
-                        ;
+
                         /* transform: scale(0.95);
                         box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4) */
+                    }
+                }
+
+                /* botón Conexión API*/
+                .linkNav.api {
+                    background-color: #05141B;
+                    color: #CCD0CF;
+                    border-radius: 5px;
+
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        background-color: #253745;
+
+                        /* transform: scale(0.95);
+                                        box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4) */
                     }
                 }
             }
@@ -506,22 +523,22 @@ footer {
     flex-direction: column;
 }
 
-.footer-nav{
+.footer-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
-    padding: 1.5rem 0 ;
+    padding: 1.5rem 0;
 }
 
-.footer-nav-list{
+.footer-nav-list {
     list-style: none;
     display: flex;
     align-items: center;
 }
 
-.footer-nav-list-item{
+.footer-nav-list-item {
     display: list-item;
     text-align: -webkit-match-parent;
     unicode-bidi: isolate;
@@ -535,17 +552,17 @@ footer {
     unicode-bidi: isolate;
 }
 
-.detalles{
+.detalles {
     display: flex;
     padding: 0px 130px 130px 130px;
     justify-content: center;
 }
 
-.detalles-trailer{
+.detalles-trailer {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .detalles-trailer iframe {
@@ -553,7 +570,7 @@ footer {
     height: 450px;
 }
 
-.detalles-titulo { 
+.detalles-titulo {
     font-size: 80px;
     font-weight: bold;
     display: flex;

@@ -22,13 +22,21 @@
     </header>
     <main>
         <section class="cajaRegistro">
-            <h1>Iniciar Sesión</h1>
-            <form action="iniciarSesion.py">
-                <label for="email"></label>
-                <input type="email" name="" id="email" placeholder="Email" required class="datos">
-                <label for="contraseña"></label>
-                <input type="password" name="" id="contraseña" placeholder="Contraseña" required class="datos">
-                <input type="submit" value="Iniciar Sesión" class="boton">
+            <form action="" method="get">
+                <h1 class="tituloRegistrarse">Iniciar Sesión</h1>
+                <div>
+                    <label for="email"></label>
+                    <input type="text" name="email" id="email" placeholder="Email" class="datos">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <label for="contraseña"></label>
+                    <input type="password" name="" id="password" placeholder="Contraseña" class="datos">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="submit" value="Iniciar Sesión" class="boton">
+                </div>
             </form>
             <a href="registro.html">Registrarse</a>
         </section>
@@ -43,5 +51,6 @@
         </nav>
         <p>&copy; 2024 GameOn. Todos los derechos reservados.</p>
     </footer>
+    <script src="../js/validar.js"></script>
 </body>
 </html>

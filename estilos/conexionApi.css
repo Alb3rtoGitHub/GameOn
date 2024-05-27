@@ -33,7 +33,7 @@
 }
 
 body {
-    background-color: #05141B;
+    background-color: #05141B !important;
     color: #CCD0CF;
 }
 
@@ -101,7 +101,7 @@ body {
 
                     &:hover {
                         background-color: #253745;
-                        ;
+
                         /* transform: scale(0.95);
                         box-shadow: 0 0 10px rgba(0, 0, blue0, alpha0.4) */
                     }
@@ -141,30 +141,48 @@ body {
     }
 }
 
+.container {
+
+    th,
+    td {
+        background-color: #05141B !important;
+        color: #CCD0CF !important;
+    }
+
+    margin-bottom: 16vh;
+}
+
 .cajaRegistro {
     box-sizing: content-box;
-    margin: 60px auto;
-    padding: 70px 70px;
-    width: 70vh;
+    margin: 10px auto;
+    padding: 20px 20px;
+    width: 40vh;
     background-color: #11212D;
     border-radius: 10px;
 
-    .error input:not(.check, .boton),
-    .error select {
-        border: 2px solid #ff0000;
-    }
+    button {
+        background-color: #253745;
+        margin: 5px 10px;
+        padding: 10px;
+        border: #253745;
+        border-radius: 6px;
 
-    .error-text {
-        color: #ff0000;
-        font-size: 0.8rem;
-        margin-top: 0px;
-        margin-bottom: 10px;
+        /* Agregar efecto de botón presionado */
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            background-color: #253745 !important;
+        }
     }
 }
 
-h1 {
 
-    font-size: 40px;
+h1 {
+    font-size: 30px;
+    text-align: center;
 }
 
 .datos {
@@ -177,7 +195,7 @@ h1 {
     display: block;
     margin-top: 20px;
     width: 450px;
-    height: 4opx;
+    height: 40px;
 }
 
 .checkbox {
@@ -201,7 +219,63 @@ h2 {
     font-size: 20px;
 }
 
-footer {
+/* 
+.footer {
+    background-color: #11212D;
+    color: #CCD0CF;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    left: 0%;
+
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+    }
+
+    .footer-nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-nav-list-item {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        unicode-bidi: isolate;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        unicode-bidi: isolate;
+    }
+
+    .flechaArriba {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+} */
+
+.footer {
     background-color: #11212D;
     color: #CCD0CF;
     height: 15vh;
@@ -209,10 +283,10 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    position: fixed;
     width: 100%;
-    left: 0%;
-    bottom: 0%;
+    left: 0px;
+    bottom: 0px;
 }
 
 .footer-nav {
@@ -221,7 +295,7 @@ footer {
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
-    padding: 1.5rem 0;
+    /* padding: 1.5rem 0; */
 }
 
 .footer-nav-list {
@@ -242,4 +316,17 @@ footer {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
+
+    a {
+        color: #CCD0CF;
+    }
 }
+
+.flechaArriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+}
+
