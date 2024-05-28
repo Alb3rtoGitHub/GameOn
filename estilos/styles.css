@@ -267,8 +267,8 @@ body {
                 color: #CCD0CF;
 
                 .juego {
-                    width: 200px;
-                    height: 300px;
+                    width: 300px;
+                    height: 170px;
                     position: relative;
                     overflow: hidden;
                     border-radius: 10px;
@@ -303,7 +303,7 @@ body {
                     }
 
                     &:hover {
-                        box-shadow: 0 0 30px #9f3648cd;
+                        box-shadow: 0 0 30px #11212D;
                         transform: scale(1.1);
 
                     }
@@ -321,7 +321,7 @@ body {
                         width: 100%;
                         height: 100%;
                         border-radius: 10px;
-                        background-color: #9f3648;
+                        background-color: #11212D;
                         /* Color azul transparente */
                         z-index: 1;
                         /* Para asegurarse de que esté sobre la imagen */
@@ -427,7 +427,7 @@ body {
                 font-size: 1.6rem;
             }
 
-            .buscadorPeliculas {
+            .buscadorJuegos {
                 .inputBuscador {
                     font-size: 1rem;
                     height: 40px;
@@ -442,14 +442,14 @@ body {
             }
         }
 
-        .peliculasTendencia {
+        .juegosTendencia {
             width: 95%;
 
             .tituloSection {
                 font-size: 2rem;
             }
 
-            .peliculas {
+            .juegos {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -484,12 +484,12 @@ body {
             }
         }
 
-        .peliculasAclamadas {
+        .juegosAclamados {
             .tituloSection {
                 font-size: 2rem;
             }
 
-            .aclamadas {
+            .aclamados {
                 .peliculaItem {
                     width: 150px;
                     min-width: 150px;
@@ -521,6 +521,14 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+    .flechaArriba {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: white;
+            cursor: pointer;
+        }
 }
 
 .footer-nav {
