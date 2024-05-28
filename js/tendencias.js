@@ -1,34 +1,28 @@
-const proxyURL = 'https://api.allorigins.win/get?url=';//esta api necesita de un proxy cors
-const apiURL = 'https://www.mmobomb.com/api1/games';
+// const proxyURL = 'https://api.allorigins.win/get?url=';//esta api necesita de un proxy cors
+// const apiURL = 'https://www.mmobomb.com/api1/games';
+// lo anterior tardaba mucho en cargar por eso me cambie a https://api.rawg.io/api/games
 
-let paginaActual = 1; // página actual
-const itemsPorPagina = 20; // juegos por pagina
-let jsonData = []; // para almacenar los datos obtenidos de la API alrededor de 400 para esta API, no vienen por pagina
+const apiKey = 'ffb8526984f24963b8644cd46348ffee'; // Reemplaza con tu API Key de RAWG
+const apiURL = 'https://api.rawg.io/api/games';
+let paginaActual = 1;
+const pageSize = 20;
 
-function llamarAPI() {
-    const respuesta = fetch(proxyURL + encodeURIComponent(apiURL));
 
-    respuesta
-        .then(response => response.json())
-        .then(data => {
-            jsonData = JSON.parse(data.contents);
-            dibujarDatos();
-        })
-        .catch(error => console.error('Hubo un problema con la operación fetch:', error));
+async function llamarAPI(page) {
+    try {
+        const response = await fetch(`${apiURL}?key=${apiKey}&page=${page}&page_size=${pageSize}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        console.log(data.results);
+        dibujarDatos(data.results);
+    } catch (error) {
+        console.error('Hubo un problema con la operación fetch:', error);
+    }
 }
 
-function dibujarDatos() {
-    // Calcular indice de los elementos a mostrar en la pagina actual
-    const indiceInicial = (paginaActual - 1) * itemsPorPagina;
-    const indiceFinal = indiceInicial + itemsPorPagina;
-    const itemsAmostrar = jsonData.slice(indiceInicial, indiceFinal);
-    
-    const filas = itemsAmostrar.map(obj => Juego(obj));
+function dibujarDatos(json) {
+    const filas = json.map(obj => Juego(obj));
     document.querySelector('.juegosTendencia .juegos').innerHTML = filas.join('');
-
-    // Actualizar el estado de los botones
-    // document.querySelector('.anterior').disabled = currentPage === 1;
-    // document.querySelector('.siguiente').disabled = endIndex >= jsonData.length;
 }
 
 
@@ -36,9 +30,9 @@ function Juego(obj) {
     return `
         <a href="./pages/detalle.html">
             <div class="juego">
-                <img class="imgTendencia" src="${obj.thumbnail}" alt="${obj.title}" loading="lazy">
+                <img class="imgTendencia" src="${obj.background_image}" alt="${obj.name}" loading="lazy">
                 <div class="tituloJuego">
-                    <h4>${obj.title}</h4>
+                    <h4>${obj.name}</h4>
                 </div>
             </div>
         </a>
@@ -47,17 +41,15 @@ function Juego(obj) {
 
 // Función para cargar la pagina siguiente
 function cargarPaginaSiguiente() {
-    const paginasTotales = Math.ceil(jsonData.length / itemsPorPagina);
-    if (paginaActual < paginasTotales)
     paginaActual++;
-    dibujarDatos();
+    llamarAPI(paginaActual);
 }
 
 // Función para cargar la pagina anterior
 function cargarPaginaAnterior() {
     if (paginaActual > 1) {
         paginaActual--;
-        dibujarDatos();
+        llamarAPI(paginaActual);
     }
 }
 
