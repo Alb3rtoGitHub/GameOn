@@ -1,8 +1,7 @@
 // const proxyURL = 'https://api.allorigins.win/get?url='; //esta api necesita de un proxy cors
 // const apiURL = 'https://www.mmobomb.com/api1/games';
 // lo anterior tardaba mucho en cargar por eso me cambie a https://api.rawg.io/api/games
-// const itemsPorLote = 10; // Número de juegos a obtener por solicitud
-// let puntoInicio = 0;
+
 const apiKey = 'ffb8526984f24963b8644cd46348ffee'; // Reemplaza con tu API Key de RAWG
 const apiURL = 'https://api.rawg.io/api/games';
 async function getGames() {
@@ -11,16 +10,7 @@ async function getGames() {
         if (response.ok) {
             const data = await response.json();
             console.log(data.results);
-            // const parsedData = JSON.parse(data.contents);
-            renderGames(data.results); // Renderiza los primeros juegos
-        //     puntoInicio += itemsPorLote;
-        //     // Carga los juegos restantes en lotes
-        //     while (puntoInicio < data.length) {
-        //         renderGames(data.slice(puntoInicio, puntoInicio + itemsPorLote));
-        //         puntoInicio += itemsPorLote;
-        //     }
-        // } else {
-        //     console.error('Error al obtener los datos:', response.statusText);
+            renderGames(data.results);
         }
     } catch (error) {
         console.error('Hubo un problema con la operación fetch:', error);
