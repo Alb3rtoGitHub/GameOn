@@ -124,14 +124,14 @@ body {
             flex-direction: column;
             row-gap: 20px;
 
-            .ListaNav {
+            .listaNav {
                 padding: initial;
 
                 .listaItem {
                     .linkNav {
                         font-weight: 400;
                         margin-right: initial;
-                        font-size: 1rem;
+                        font-size: 0.8rem;
                         padding: 0.2rem;
 
                     }
@@ -159,6 +159,9 @@ body {
 }
 
 .cajaRegistro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: content-box;
     margin: 10px auto;
     padding: 20px 20px;
@@ -172,6 +175,7 @@ body {
         padding: 10px;
         border: #253745;
         border-radius: 6px;
+        font-size: 1rem;
 
         /* Agregar efecto de botón presionado */
         transition: transform 0.3s, box-shadow 0.3s;
@@ -183,13 +187,14 @@ body {
             background-color: #253745 !important;
         }
     }
+
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
 }
 
 
-h1 {
-    font-size: 30px;
-    text-align: center;
-}
 
 .datos {
     font-size: 20px;
@@ -241,11 +246,16 @@ h2 {
 
 .footer-nav {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
+
     /* padding: 1.5rem 0; */
+    p {
+        font-size: 0.8rem;
+    }
 }
 
 .footer-nav-list {
@@ -272,10 +282,34 @@ h2 {
     }
 }
 
+.footer-nav-list-link {
+    text-decoration: none;
+}
+
 .flechaArriba {
     position: fixed;
     bottom: 20px;
     right: 20px;
     color: white;
     cursor: pointer;
+}
+
+/* ESTILOS PARA TABLET Y HEADER MOBILE*/
+@media (max-width: 768px) {
+    .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 40px;
+            margin-right: 40px;
+            padding: 1.5rem 0;
+    
+            p {
+                font-size: 0.5rem;
+            }
+        }
+                .footer-nav-list-link {
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                }
 }
