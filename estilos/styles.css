@@ -634,11 +634,11 @@ hr {
                 margin-bottom: 10px;
                 text-align: justify;
             }
-            
+
             .sinopsis-texto {
                 font-size: 16px;
                 line-height: 1.6;
-                
+
                 article {
                     text-align: justify;
                     margin-top: 10px;
@@ -658,19 +658,29 @@ hr {
         }
 
         .detalles {
+            padding: 0px 30px 30px 30px;
             flex-direction: column-reverse;
 
             .detalles-trailer {
                 width: 100%;
+
+                .iframe {
+                    width: 100vw;
+                    /* height: 450px; */
+                }
             }
 
+            width: 100%;
 
             .detalles-sinopsis {
 
+                padding: 0px;
+
                 .sinopsis-titulo {
                     font-size: 0.8rem;
+
                 }
-                
+
                 .sinopsis-texto {
                     font-size: 0.9rem;
                 }
