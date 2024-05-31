@@ -148,13 +148,13 @@ body {
         .navegacion {
             margin-left: 10px;
             margin-right: 10px;
-            flex-direction: column;
+            /* flex-direction: column; */
             row-gap: 20px;
 
             .listaNav {
                 padding: initial;
                 display: flex;
-                flex-direction: column;
+                /* flex-direction: column; */
 
                 .listaItem {
                     .linkNav {
