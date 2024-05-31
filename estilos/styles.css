@@ -124,7 +124,7 @@ body {
                 padding: initial;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content:space-around;
+                justify-content: space-around;
                 gap: 15px;
 
                 .listaItem {
@@ -594,52 +594,87 @@ hr {
     }
 }
 
-.detalles {
-    display: flex;
-    padding: 0px 130px 130px 130px;
-    justify-content: center;
+/*ESTILOS DETALLES*/
+.mainDetalle {
+
+    .detalles-titulo {
+        font-size: 3.0rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .detalles {
+        display: flex;
+        padding: 0px 130px 130px 130px;
+        justify-content: center;
+
+        .detalles-trailer {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .iframe {
+                width: 800px;
+                height: 450px;
+            }
+        }
+
+
+        .detalles-sinopsis {
+            border-radius: 5px;
+            padding: 20px;
+
+            .sinopsis-titulo {
+                font-size: 1rem;
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+            
+            .sinopsis-texto {
+                font-size: 16px;
+                line-height: 1.6;
+                
+                article {
+                    text-align: justify;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
 }
 
-.detalles-trailer {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*ESTILOS DETALLES PARA CELULAR Y TABLETS*/
+@media screen and (max-width: 1200px) {
+    .mainDetalle {
 
-.detalles-trailer iframe {
-    width: 800px;
-    height: 450px;
-}
+        .detalles-titulo {
+            font-size: 2rem;
+        }
 
-.detalles-titulo {
-    font-size: 80px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-}
+        .detalles {
+            flex-direction: column-reverse;
 
-.detalles-sinopsis {
-    border-radius: 5px;
-    padding: 20px;
-}
+            .detalles-trailer {
+                width: 100%;
+            }
 
-.sinopsis-titulo {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
-.sinopsis-texto {
-    font-size: 16px;
-    line-height: 1.6;
-}
+            .detalles-sinopsis {
 
-.sinopsis-texto article {
-    margin-top: 10px;
-}
-
-.sinopsis-texto article p {
-    margin-bottom: 15px;
+                .sinopsis-titulo {
+                    font-size: 0.8rem;
+                }
+                
+                .sinopsis-texto {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
 }
